@@ -45,7 +45,7 @@ def color(value):
     return f'background-color: {color}'
 
 df_style = df_filtrado.style.applymap(color, subset=['Carrera']).background_gradient(subset=['Horario'], cmap='Greys')
-st.dataframe(df_style, hide_index=True, use_container_width=True)
+st.dataframe(df_filtrado, hide_index=True, use_container_width=True)
 
 # Mostrar el número de resultados
 st.write(f"Total de resultados: {df_filtrado.shape[0]}")
