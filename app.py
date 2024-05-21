@@ -31,7 +31,7 @@ df_filtrado = df[
 ]
 
 # Mostrar el DataFrame filtrado
-st.dataframe(df_filtrado)
+st.dataframe(df_filtrado, hide_index=True, use_container_width=True)
 
 # Mostrar el número de resultados
 st.write(f"Total de resultados: {df_filtrado.shape[0]}")
