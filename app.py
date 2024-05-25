@@ -52,20 +52,20 @@ df_filtrado = df[
 # Mostrar el DataFrame filtrado
 def color(value):
     if value=='SOCIO':
-        color = 'salmon'
+        color = 'darkred'
     elif value=='COMU':
-        color = 'lightgreen'
+        color = 'darkgreen'
     elif value=='CP':
-        color = 'skyblue'
+        color = 'navy'
     elif value=='TS':
         color = 'violet'
     else:
         return
     return f'background-color: {color}'
 
-df_style = df_filtrado.style.map(color, subset=['Carrera']).background_gradient(subset=['Horario'], cmap='Greys')
+df_style = df_filtrado.style.map(color, subset=['Carrera'])
 
-st.dataframe(df_filtrado, hide_index=True, use_container_width=True, )
+st.dataframe(df_style, hide_index=True, use_container_width=True, )
 
 # Mostrar el número de resultados
 st.write(f"Total de resultados: {df_filtrado.shape[0]}")
