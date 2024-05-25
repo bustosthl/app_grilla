@@ -19,10 +19,11 @@ clave = st.sidebar.multiselect("Clave", options=df['Materia clave'].unique(), de
 dic = {'0':'lunes','1':'martes','2':'miercoles','3':'jueves','4':'viernes'}
 hoy = '0'
 hoy = dt.datetime.now().weekday()
-for k in dic.keys():
-    if int(hoy) >= 5: 
-        hoy = '0'
-    hoy = str(hoy).replace(k, dic[k])
+print(hoy, type(hoy))
+if hoy >= 5: 
+    hoy = '0'
+    for k in dic.keys():
+        hoy = str(hoy).replace(k, dic[k])
 dia = st.sidebar.multiselect("Dia", options=df['Dia'].unique(), default=[hoy]) # df['Dia'].unique()
 
 # Filtro por horario
