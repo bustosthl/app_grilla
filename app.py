@@ -21,7 +21,7 @@ hoy = '0'
 hoy = dt.datetime.now().weekday()
 for k in dic.keys():
     if int(hoy) >= 5: 
-        hoy = '4'
+        hoy = '0'
     hoy = str(hoy).replace(k, dic[k])
 dia = st.sidebar.multiselect("Dia", options=df['Dia'].unique(), default=[hoy]) # df['Dia'].unique()
 
