@@ -17,7 +17,7 @@ clave = st.sidebar.multiselect("Clave", options=df['Materia clave'].unique(), de
 
 # Filtro por Dia
 dic = {'0':'lunes','1':'martes','2':'miercoles','3':'jueves','4':'viernes'}
-hoy = dt.datetime.now().weekday()
+hoy = '4' #dt.datetime.now().weekday()
 for k in dic.keys():
     if int(hoy) >= 5: 
         hoy = '4'
