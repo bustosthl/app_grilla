@@ -32,8 +32,9 @@ hoy = '0'
 hoy = dt.datetime.now().weekday()
 if hoy >= 5: 
     hoy = '0'
-    for k in dic.keys():
-        hoy = str(hoy).replace(k, dic[k])
+for k in dic.keys():
+    hoy = str(hoy).replace(k, dic[k])
+
 dia = st.sidebar.multiselect("Dia", options=df['Dia'].unique(), default=[hoy]) # df['Dia'].unique()
 
 # Filtro por horario
