@@ -18,6 +18,7 @@ st.sidebar.subheader("Filtros")
 
 # Filtro por Nombre
 carrera = st.sidebar.multiselect("Carrera", options=df['Carrera'].unique(), default=['SOCIO','COMU']) # default = df['Carrera'].unique()
+ala = st.sidebar.multiselect("ala", options=df['ala'].unique(), default=['SJ','HU','SG']) # default = df['Carrera'].unique()
 
 # Filtro por clave
 clave = st.sidebar.checkbox('Materias clave', True)
@@ -43,6 +44,7 @@ hs_min, hs_max = st.sidebar.slider("Horario", min_value=int(df['Horario'].min())
 # Aplicar filtros
 df_filtrado = df[
     (df['Carrera'].isin(carrera)) &
+    (df['ala'].isin(ala)) &
     #(df['Materia clave'].isin(clave)) &
     (filtro_clave) &
     (df['Dia'].isin(dia)) &
