@@ -67,7 +67,7 @@ def color(value):
         return
     return f'background-color: {color}'
 
-df_style = df_filtrado.style.map(color, subset=['Carrera'])
+df_style = df_filtrado.dropna(axis=1, how='all').style.map(color, subset=['Carrera'])
 
 st.dataframe(df_style, hide_index=True, use_container_width=True, )
 
