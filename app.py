@@ -15,7 +15,8 @@ else:
 
 # Título de la aplicación
 st.title("Grilla Sociales-UBA")
-
+st.set_page_config(page_title='Grilla Sociales', 
+                   page_icon='images/favicon.png')
 # Sección de filtros
 st.sidebar.subheader("Filtros")
 
