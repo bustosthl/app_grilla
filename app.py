@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd, datetime as dt
 from streamlit_javascript import st_javascript
 
+st.set_page_config(page_title='Grilla Sociales', 
+                   page_icon='images/favicon.png')
+
 df = pd.read_excel('202503_grilla.xlsx', sheet_name='consolidado')
 df['Dia'] = df['Dia'].astype(str).str.lower()
 
@@ -15,8 +18,7 @@ else:
 
 # Título de la aplicación
 st.title("Grilla Sociales-UBA")
-st.set_page_config(page_title='Grilla Sociales', 
-                   page_icon='images/favicon.png')
+
 # Sección de filtros
 st.sidebar.subheader("Filtros")
 
