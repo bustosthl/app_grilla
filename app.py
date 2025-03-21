@@ -8,8 +8,10 @@ df['Dia'] = df['Dia'].astype(str).str.lower()
 st_theme = st_javascript("""window.getComputedStyle(window.parent.document.getElementsByClassName("stApp")[0]).getPropertyValue("color-scheme")""")
 if st_theme == "dark":
     ruta_imagen = 'images/emergente pp logo blanco.png'
+    ruta_imagen = 'images/mella logo fondo oscuro.png'
 else:
     ruta_imagen = 'images/emergente pp logo negro.png'
+    ruta_imagen = 'images/mella logo fondo claro.png'
 
 # Título de la aplicación
 st.title("Grilla Sociales-UBA")
